@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<title></title>
+</head>
+<body>
+	<div class="baner">
+		<a href="pesel.html"><img src="baner.jpg" id="img"></a>
+	</div>
+	<div class="main">
+		<div id="divmain1">
+			<ul>
+				<li><a href="pesel.html">PESEL</a></li>
+				<li><a href="liczba.html">Podaj liczbę</a></li>
+				<li><a href="ciag.html">Wypisz ciąg znaków</a></li>
+			</ul>
+		</div>
+		<div id="divmain2">
+			<form class="form1">
+				Podaj liczbę 1: <input type="number" name="" id="liczba1">
+				Podaj liczbę 2: <input type="number" name="" id="liczba2">
+				<input type="button" value="Naciśnij" name="" id="liczbainput" onclick="func()">
+			</form>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+
+	 function func() {
+		b = document.getElementById('liczba1').value;
+		c = document.getElementById('liczba2').value;
+		d = document.getElementById('divmain2');
+		lista = [];
+
+		for (i = b; i<=c; i++) {
+			lista.push(i)
+		}
+
+		const p = document.createElement('p');
+		const tn = document.createTextNode(lista);
+
+		p.appendChild(tn);
+
+		d.appendChild(p);
+	}
+</script>
+</html>

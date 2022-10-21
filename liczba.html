@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<title></title>
+</head>
+<body>
+	<div class="baner">
+		<a href="pesel.html"><img src="baner.jpg" id="img"></a>
+	</div>
+	<div class="main">
+		<div id="divmain1">
+			<ul>
+				<li><a href="pesel.html">PESEL</a></li>
+				<li><a href="liczba.html">Podaj liczbę</a></li>
+				<li><a href="ciag.html">Wypisz ciąg znaków</a></li>
+			</ul>
+		</div>
+		<div id="divmain2">
+			<form class="form1">
+				Podaj liczbę: <input type="number" name="" id="liczba">
+				<input type="submit" value="Naciśnij" name="" id="liczbainput">
+			</form>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	a = document.getElementById('liczbainput')
+	
+	
+	a.addEventListener("click", function() {
+		b = document.getElementById('liczba').value;
+		
+		if (b > 0) {
+			alert('Podana liczba jest dodatnia')
+		}
+
+		else if (b == 0) {
+			alert('Podana liczba to 0')
+		}
+
+		else if (b < 0) {
+			alert('Podana liczba jest ujemna')
+		}
+	})
+</script>
+</html>
